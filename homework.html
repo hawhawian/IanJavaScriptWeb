@@ -47,6 +47,21 @@
             str+="</table>";
 
             document.getElementById("myId").innerHTML = str;
+
+            var img = document.getElementById('rangeImg');
+            if (n >= 0 && n <= 100) {
+                img.src = "img/great.PNG";
+                img.alt = "Great";
+            } else if (n >= 101 && n <= 200) {
+                img.src = "img/omg.PNG";
+                img.alt = "OMG";
+            } else if (n >= 201) {
+                img.src = "img/omfg.PNG";
+                img.alt = "OMFG";
+            } else {
+                img.src = "img/great.PNG";
+                img.alt = "Great";
+            }
         }
     </script>
 </head>
@@ -66,6 +81,9 @@
         <label for="numberInput">輸入數值:</label>
         <input type="number" id="numberInput" placeholder="輸入數值" />
         <input type="button" value="OK" title="OK" onclick="myFunction()" />
+    </div>
+    <div class="center">
+        <img id="rangeImg" src="img/great.PNG" alt="Range" width="200px" />
     </div>
     <div id="myId" class="card"></div>
 </body>
