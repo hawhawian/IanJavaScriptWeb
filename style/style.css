@@ -11,3 +11,7 @@ a{
 a:link{
     color:black;
 }
+.center {
+    display: block;
+    text-align: center;
+}
